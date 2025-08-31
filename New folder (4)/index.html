@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>buatbocilduaributigabelas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#ff7fbf;         /* primary */
+      --pink-soft:#ffd3e8;    /* light tint */
+      --pink-deep:#ff4fa3;    /* deeper accent */
+      --white:#ffffff;        /* secondary */
+      --ink:#4a3b47;          /* text */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink);
+      background: radial-gradient(1200px 600px at 10% -10%, var(--pink-soft), transparent),
+                  radial-gradient(1200px 600px at 110% 10%, #ffe9f4, transparent),
+                  linear-gradient(180deg, #fff, #fff6fb);
+    }
+    .wrap{max-width:980px; margin-inline:auto; padding:28px 18px 60px}
+
+    header{
+      text-align:center; margin-bottom:22px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:999px;
+      background:var(--white); color:var(--pink-deep); border:1.5px solid var(--pink-soft);
+      font-weight:600; letter-spacing:.2px; box-shadow:0 4px 18px rgba(255,79,163,.12);
+    }
+    h1{margin:12px 0 6px; font-size:clamp(30px,6vw,46px); color:var(--pink-deep); letter-spacing:.3px}
+    .sub{margin:0; font-size:clamp(14px,2.8vw,16px); color:#7a5f6e}
+
+    .card{
+      background:var(--white); border:1.5px solid var(--pink-soft); border-radius:20px; padding:18px 18px;
+      box-shadow:0 10px 30px rgba(255,79,163,.10); backdrop-filter:saturate(1.1);
+    }
+    .section{margin-top:22px}
+    .section h2{margin:0 0 10px; font-size:18px; color:var(--pink-deep);}
+
+    /* list area */
+    ol.fav{
+      margin:0; padding-left:20px; line-height:1.7; font-size:16px;
+    }
+    ol.fav li{ padding-left:6px }
+    /* enforce lowercase vibe visually just in case */
+    .lowercase{ text-transform:none }
+
+    /* photo grid */
+    .grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:12px }
+    .photo{
+      position:relative; border-radius:18px; overflow:hidden; border:1.5px solid var(--pink-soft);
+      background: repeating-conic-gradient(from 0deg, #fff, #fff 10deg, #ffeefa 10deg, #ffeefa 20deg);
+      aspect-ratio:1/1; box-shadow:0 8px 22px rgba(255,79,163,.12);
+    }
+    .photo input{ display:none }
+    .photo label{
+      position:absolute; inset:0; display:grid; place-content:center; text-align:center; padding:12px;
+      font-size:13px; color:#9b7e8e; cursor:pointer; background:linear-gradient(180deg,transparent,rgba(255,255,255,.7));
+    }
+    .photo img{ width:100%; height:100%; object-fit:cover; display:block }
+
+    .caption{
+      margin:14px 0 0; text-align:center; font-size:14px; color:#6c5462;
+      border-left:4px solid var(--pink-deep); padding:10px 10px 10px 12px; background:rgba(255,215,235,.45);
+      border-radius:12px; box-shadow:0 6px 16px rgba(255,79,163,.10);
+    }
+
+    footer{ margin-top:28px; text-align:center; font-size:12px; color:#9b7e8e }
+
+    /* cute floaters */
+    .float{
+      position:fixed; inset:auto auto 12px 12px; background:var(--pink-deep); color:#fff; border-radius:999px;
+      padding:8px 12px; font-size:12px; box-shadow:0 12px 28px rgba(255,79,163,.3); opacity:.9
+    }
+
+    /* responsive */
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge" aria-hidden="true">🩷 website spesial</div>
+      <h1>buatbocilduaributigabelas</h1>
+      <p class="sub">ni website gwh kasi ke org yg speszziall</p>
+    </header>
+
+    <!-- list section -->
+    <section class="section card" aria-labelledby="fav-title">
+      <h2 id="fav-title">list yang dia suka:</h2>
+      <ol class="fav lowercase">
+        <li>aku (kayanya sih, gatau juga)</li>
+        <li>martabak manis kaya dia ahahaha (suka eskrim juga tapi gaboleh karna jumbara)</li>
+        <li>warna kesukaannya pink, jadi website ini aku kasih tema pink</li>
+        <li>idolanya renjun?!?! (gwh cemburu)</li>
+        <li>game kesukaannya roblox (#roblox4life)</li>
+        <li>dia suka kucing sedangkan kalo aku suka ni org</li>
+      </ol>
+    </section>
+
+    <!-- photo grid section -->
+    <section class="section">
+      <div class="grid">
+        <div class="photo"><img alt="foto 1" src="foto1.jpg"/><label>(foto 1)</label></div>
+        <div class="photo"><img alt="foto 2" src="foto2.jpg"/><label>(foto 2)</label></div>
+        <div class="photo"><img alt="foto 3" src="foto3.jpg"/><label>(foto 3)</label></div>
+        <div class="photo"><img alt="foto 4" src="foto4.jpg"/><label>(foto 4)</label></div>
+      </div>
+      <p class="caption">NI ORG CAKEP BANGETT GILAKK, AKU UDAH NGOMONG BERIBUU KALII SAMAA NII ORG</p>
+    </section>
+
+    <footer>
+      Adzana Keyla Yoaletha
+    </footer>
+  </div>
+
+  <div class="float" title="tip">💡 tekan ctrl+s untuk simpan</div>
+</body>
+</html>
